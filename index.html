@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CMU Academy Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="../index.html" class="back-to-menu-btn">← Back</a>
+      <div class="title">
+        <h1>CMU Academy Hub</h1>
+        <p class="subtitle">Embedded Python CMU projects</p>
+      </div>
+      <div class="actions">
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="projectsGrid" class="projects-grid">Loading projects…</section>
+    </main>
+
+    <footer class="site-footer">Play projects inline, open them in a new tab, or inspect the Python source.</footer>
+  </div>
+
+  <!-- Embed modal -->
+  <div id="embedModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="embedBackdrop"></div>
+    <button id="embedClose" class="modal-close" aria-label="Close">✕</button>
+    <div class="modal-content embed-mode">
+      <iframe id="embedIframe" sandbox="allow-scripts allow-forms allow-same-origin" src="" frameborder="0" title="CMU Academy embed"></iframe>
+    </div>
+  </div>
+
+  <!-- Code modal -->
+  <div id="codeModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="codeBackdrop"></div>
+    <button id="codeClose" class="modal-close" aria-label="Close">✕</button>
+    <div class="modal-content code-mode">
+      <section class="code-panel">
+        <div class="code-panel-header">
+          <h2 id="codeTitle">Project code</h2>
+        </div>
+        <pre id="codeContent" class="code-content"></pre>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

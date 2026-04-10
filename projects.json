@@ -1,0 +1,80 @@
+[
+  {
+    "id": "aquarium",
+    "title": "Aquarium",
+    "description": "An aquarium simulation game using Python code!",
+    "icon": "🐠",
+    "codeFile": "aquarium.py",
+    "url": "https://academy.cs.cmu.edu/sharing/grayBee456710",
+    "embedUrl": "https://academy.cs.cmu.edu/sharing/grayBee456710/embed",
+    "tags": ["interactive","aquarium","game","fish"]
+  },
+  {
+    "id": "color-palette",
+    "title": "Color Palette",
+    "description": "A color palette created using Python code!",
+    "icon": "🎨",
+    "codeFile": "color-palette.py",
+    "url": "https://academy.cs.cmu.edu/sharing/cornflowerBlueOwl097174",
+    "embedUrl": "https://academy.cs.cmu.edu/sharing/cornflowerBlueOwl097174/embed",
+    "tags": ["interactive","color","palette","clickable"]
+  },
+  {
+    "id": "amusement-park",
+    "title": "Amusement Park",
+    "description": "An amusement park picture created using Python code!",
+    "icon": "🎢",
+    "codeFile": "amusement-park.py",
+    "url": "https://academy.cs.cmu.edu/sharing/indigoSnake406568",
+    "embedUrl": "https://academy.cs.cmu.edu/sharing/indigoSnake406568/embed",
+    "tags": ["static","amusement","park"]
+  },
+  {
+    "id": "internet",
+    "title": "Internet",
+    "description": "A simple internet representation created using Python code!",
+    "icon": "🌐",
+    "codeFile": "internet.py",
+    "url": "https://academy.cs.cmu.edu/sharing/whiteSmokeOwl443550",
+    "embedUrl": "https://academy.cs.cmu.edu/sharing/whiteSmokeOwl443550/embed",
+    "tags": ["interactive","internet","network","clickable"]
+  },
+  {
+    "id": "dice-roll",
+    "title": "Dice Roll",
+    "description": "A dice roll simulator just press a button! You can also change the background.",
+    "icon": "🎲",
+    "codeFile": "dice-roll.py",
+    "url": "https://academy.cs.cmu.edu/sharing/mintCreamSnake400510",
+    "embedUrl": "https://academy.cs.cmu.edu/sharing/mintCreamSnake400510/embed",
+    "tags": ["interactive","dice","game"]
+  },
+  {
+    "id": "calculator",
+    "title": "Calculator",
+    "description": "A calculator created using Python code! No UI, just the logic.",
+    "icon": "🧮",
+    "codeFile": "calculator.py",
+    "tags": ["console","calculator","math"]
+  },
+  {
+    "id": "minecraft",
+    "title": "Minecraft",
+    "description": "Minecraft scene created using Python code!",
+    "icon": "🪵",
+    "codeFile": "minecraft.py",
+    "url": "https://academy.cs.cmu.edu/sharing/seashellCow298105",
+    "embedUrl": "https://academy.cs.cmu.edu/sharing/seashellCow298105/embed",
+    "tags": ["static","minecraft","creeper"]
+  },
+  {
+    "id": "nature-scene",
+    "title": "Nature Scene",
+    "description": "Nature Scene created using Python code!",
+    "icon": "🌳",
+    "codeFile": "nature-scene.py",
+    "url": "https://academy.cs.cmu.edu/sharing/dodgerBlueHorse185904",
+    "embedUrl": "https://academy.cs.cmu.edu/sharing/dodgerBlueHorse185904/embed",
+    "tags": ["static","nature","scene","plane"]
+  }
+]
