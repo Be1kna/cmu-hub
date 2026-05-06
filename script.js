@@ -1,4 +1,5 @@
-const projectsFile = 'projects.json';
+const projectsFiles = ['CMU projects/projects.json', 'projects.json'];
+const codeBaseFolder = 'CMU projects/';
 
 const themeToggle = document.getElementById('themeToggle');
 
@@ -65,9 +66,24 @@ async function openCodeModal(project) {
   codeClose.focus();
 
   try {
-    const response = await fetch(project.codeFile);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    codeContent.textContent = await response.text();
+    const codeCandidates = project.codeFile.includes('/')
+      ? [project.codeFile]
+      : [`${codeBaseFolder}${project.codeFile}`, project.codeFile];
+
+    let sourceText = null;
+    for (const candidate of codeCandidates) {
+      const response = await fetch(candidate);
+      if (response.ok) {
+        sourceText = await response.text();
+        break;
+      }
+    }
+
+    if (sourceText === null) {
+      throw new Error('Code file was not found in configured locations.');
+    }
+
+    codeContent.textContent = sourceText;
   } catch (error) {
     codeContent.textContent = `Unable to load ${project.codeFile}.\n\n${error.message}`;
     console.error(error);
@@ -139,8 +155,21 @@ function renderGrid(projects) {
 
 async function loadProjects() {
   try {
-    const response = await fetch(projectsFile);
-    const projects = await response.json();
+    let projects = null;
+
+    for (const filePath of projectsFiles) {
+      const response = await fetch(filePath);
+      if (!response.ok) {
+        continue;
+      }
+      projects = await response.json();
+      break;
+    }
+
+    if (!projects) {
+      throw new Error('No projects file found.');
+    }
+
     renderGrid(projects);
   } catch (error) {
     document.getElementById('projectsGrid').innerHTML = '<p class="error">Failed to load projects.json</p>';
